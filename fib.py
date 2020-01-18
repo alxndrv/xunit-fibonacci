@@ -8,6 +8,9 @@ def get_fibonacci_seq(start, N=10):
     prevValue = 0
     value = 1
 
+    if start == 0:
+        results.append(1)
+
     while count < N:
         # tmp = prevValue + value
         prevValue, value = value, prevValue + value
