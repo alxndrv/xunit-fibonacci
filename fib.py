@@ -40,6 +40,9 @@ def fibonacci(argv):
         Usage: fib.py <start> [<count>]
         """)
 
+    # These calls to int() will throw a ValueError
+    # if given arguments are not convertable to integer values.
+    # This is intentional to showcase the relevant unit test failing
     start = int(argv[0])
     N = int(argv[1]) if len(argv) > 1 else 10
 

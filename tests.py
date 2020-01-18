@@ -27,6 +27,13 @@ class TestUserInputs(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             fibonacci(argv)
 
+    # As of right now, this test intentionally fails
+    # to showcase unit tests' usefulness in detecting broken functionality
+    def test_non_coercible_arguments(self):
+        argv = ["not_an_int", "not_an_int_either"]
+        # This should raise a RuntimeError, not a ValueError returned by int()
+        with self.assertRaises(RuntimeError):
+            fibonacci(argv)
 
 class TestFileOutput(unittest.TestCase):
 
