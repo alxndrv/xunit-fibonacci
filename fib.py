@@ -1,7 +1,7 @@
 import sys
 
 
-def get_fibonacci_seq(start, N):
+def get_fibonacci_seq(start, N=10):
     results = []
     count = 0
 
@@ -26,15 +26,16 @@ def write_sequence_to_file(seq, filename="fibonacci.txt"):
         f.close()
 
 
+# Generates the requested fibonacci sequence, writes it to a file and returns it as a list
 def fibonacci(argv):
     # Arguments should be:
     # - Starting number
     # - Length of elements to output (default to 10)
     if len(argv) < 1:
-        print("Missing one or more arguments")
-        print("Usage: main.py <start> [<count>]")
-
-        return
+        raise RuntimeError("""
+        Missing one or more arguments
+        Usage: main.py <start> [<count>]
+        """)
 
     start = int(argv[0])
     N = int(argv[1]) if len(argv) > 1 else 10
@@ -43,6 +44,7 @@ def fibonacci(argv):
     write_sequence_to_file(results)
 
     print(results)
+    return results
 
 
 if __name__ == '__main__':
