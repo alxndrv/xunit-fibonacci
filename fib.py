@@ -37,7 +37,7 @@ def fibonacci(argv):
     if len(argv) < 1:
         raise RuntimeError("""
         Missing one or more arguments
-        Usage: main.py <start> [<count>]
+        Usage: fib.py <start> [<count>]
         """)
 
     start = int(argv[0])
