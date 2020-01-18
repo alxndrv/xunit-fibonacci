@@ -1,0 +1,17 @@
+#+TITLE: Unit testing: Fibonacci sequence generator
+
+** Requirements:
+This project relies purely on components which are built into the Python 3 standard library.
+As such, the only requirement for running these code samples is a valid installation of Python 3.
+
+** Usage:
+The program can be executed using the following command:
+#+BEGIN_SRC
+$ python fib.py <start> [<count>]
+#+END_SRC
+
+** Running tests:
+Tests can be run using the following command:
+#+BEGIN_SRC
+$ python -m unittest tests.py
+#+END_SRC
